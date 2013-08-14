@@ -13,9 +13,6 @@
 #
 #     sudo dpkg -r vim
 
-# TODO:
-# - fix ruby interpreter (use system instead of rbenv)
-
 set -e
 
 echo "Update the apt index"
