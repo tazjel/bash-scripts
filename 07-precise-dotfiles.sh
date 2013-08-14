@@ -35,29 +35,30 @@ make_symlink $HOME/Dropbox                    $HOME/dropbox
 make_symlink $DOTFILES/etc/hosts              /etc/hosts
 make_symlink $DOTFILES/etc/rc.local           /etc/rc.local
 
-make_symlink $DOTFILES/.bashrc                $HOME/.bashrc
+make_symlink $DOTFILES_PUBLIC/bashrc          $HOME/.bashrc
+make_symlink $DOTFILES_PUBLIC/tmux.conf       $HOME/.tmux.conf
+make_symlink $DOTFILES_PUBLIC/vimrc           $HOME/.vimrc
+make_symlink $DOTFILES_PUBLIC/bundle          $HOME/.bundle
+make_symlink $DOTFILES_PUBLIC/.gemrc          $HOME/gemrc
+make_symlink $DOTFILES/.htoprc                $HOME/.htoprc
+make_symlink $DOTFILES/.irbrc                 $HOME/.irbrc
+make_symlink $DOTFILES/.jrubyrc               $HOME/.jrubyrc
+make_symlink $DOTFILES/.pythonrc              $HOME/.pythonrc
+make_symlink $DOTFILES/.pryrc                 $HOME/.pryrc
+make_symlink $DOTFILES/.rvmrc                 $HOME/.rvmrc
+make_symlink $DOTFILES/.diakonos              $HOME/.diakonos
+make_symlink $DOTFILES/.config/htop/htoprc    $HOME/.config/htop/htoprc
+
 make_symlink $DOTFILES/.bash_aliases          $HOME/.bash_aliases
 make_symlink $DOTFILES/.bash_history          $HOME/.bash_history
-make_symlink $DOTFILES/.bundle                $HOME/.bundle
 make_symlink $DOTFILES/.emacs                 $HOME/.emacs
-make_symlink $DOTFILES/.gemrc                 $HOME/.gemrc
 make_symlink $DOTFILES/.gitconfig             $HOME/.gitconfig
 make_symlink $DOTFILES/.gitignore_global      $HOME/.gitignore_global
 make_symlink $DOTFILES/.hgrc                  $HOME/.hgrc
 make_symlink $DOTFILES/.mysql_history         $HOME/.mysql_history
 make_symlink $DOTFILES/.pry_history           $HOME/.pry_history
-make_symlink $DOTFILES/.htoprc                $HOME/.htoprc
-make_symlink $DOTFILES/.irbrc                 $HOME/.irbrc
-make_symlink $DOTFILES/.jrubyrc               $HOME/.jrubyrc
 make_symlink $DOTFILES/.psql_history          $HOME/.psql_history
-make_symlink $DOTFILES/.pythonrc              $HOME/.pythonrc
-make_symlink $DOTFILES/.pryrc                 $HOME/.pryrc
-make_symlink $DOTFILES/.rvmrc                 $HOME/.rvmrc
-make_symlink $DOTFILES_PUBLIC/tmux.conf       $HOME/.tmux.conf
-make_symlink $DOTFILES_PUBLIC/vimrc           $HOME/.vimrc
-make_symlink $DOTFILES/.diakonos              $HOME/.diakonos
 
-make_symlink $DOTFILES/.config/htop/htoprc      $HOME/.config/htop/htoprc
 make_symlink $DOTFILES/.config/autostart        $HOME/.config/autostart
 make_symlink $DOTFILES/.config/user-dirs.dirs   $HOME/.config/user-dirs.dirs
 make_symlink $DOTFILES/.config/ghb/preferences  $HOME/.config/ghb/preferences # handbrake
