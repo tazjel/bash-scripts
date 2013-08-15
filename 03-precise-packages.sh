@@ -195,7 +195,8 @@ sudo apt-get -y install \
   pv \
   libdvdread4 \
   gcp \
-  mercurial
+  mercurial \
+  perl-doc
 
 sudo update-rc.d -f redis-server remove
 sudo update-rc.d -f mysql remove

@@ -39,7 +39,8 @@ make_symlink $DOTFILES_PUBLIC/bashrc          $HOME/.bashrc
 make_symlink $DOTFILES_PUBLIC/tmux.conf       $HOME/.tmux.conf
 make_symlink $DOTFILES_PUBLIC/vimrc           $HOME/.vimrc
 make_symlink $DOTFILES_PUBLIC/bundle          $HOME/.bundle
-make_symlink $DOTFILES_PUBLIC/.gemrc          $HOME/gemrc
+make_symlink $DOTFILES_PUBLIC/gemrc           $HOME/.gemrc
+make_symlink $DOTFILES_PUBLIC/ackrc           $HOME/.ackrc
 make_symlink $DOTFILES/.htoprc                $HOME/.htoprc
 make_symlink $DOTFILES/.irbrc                 $HOME/.irbrc
 make_symlink $DOTFILES/.jrubyrc               $HOME/.jrubyrc
