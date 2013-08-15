@@ -16,7 +16,6 @@ download_if_missing "https://linux.dropbox.com/packages/ubuntu/dropbox_$DROPBOX_
 if [[ ! $(command -v dropbox) ]]; then
   sudo apt-get install python-gpgme gdebi
   sudo gdebi -n -o APT::Install-Recommends="0" "$HOME/Downloads/dropbox_$DROPBOX_VERSION.deb"
-  killall nautilus
   nautilus --quit
   dropbox autostart y
 else
