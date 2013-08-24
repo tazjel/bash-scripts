@@ -60,5 +60,5 @@ sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
 echo "Set password 'postgres' for DB USER 'postgres'"
 
 echo "It's now possible to connect to the local database with either of the two following options:"
-echo "    $ sudo -i -u postgres psql # => peer authentication, no password required"
-echo "    $ psql -U postgres -h localhost # => password authentication with password 'postgres'"
+echo "    $ sudo -i -u postgres psql        # => peer authentication, no password required"
+echo "    $ psql -U postgres -h localhost   # => password authentication with password 'postgres'"
