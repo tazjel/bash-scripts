@@ -2,7 +2,9 @@
 
 set -e
 
-# gconftool-2 -R /apps/gnome-terminal/profiles/Default
+# To get all the values run:
+#
+#      gconftool-2 -R /apps/gnome-terminal/profiles/Default
 
 basic_profile(){
   local profile=$1
@@ -36,7 +38,7 @@ gconftool-2 --type string --set /apps/gnome-terminal/keybindings/prev_tab 'disab
 gconftool-2 --type string --set /apps/gnome-terminal/keybindings/next_tab 'disabled'
 
 echo "Set up active profiles"
-gconftool-2 --type list --list-type string --set /apps/gnome-terminal/global/profile_list '[Default,DefaultBkp,SolarizedDark,SolarizedLight]'
+gconftool-2 --type list --list-type string --set /apps/gnome-terminal/global/profile_list '[Default,DefaultBkp,SolarizedDark,SolarizedLight,AgnosticDark,AgnosticLight]'
 
 echo "Backup Default profile"
 cp -R $HOME/.gconf/apps/gnome-terminal/profiles/Default $HOME/.gconf/apps/gnome-terminal/profiles/DefaultBkp
@@ -44,7 +46,7 @@ sleep 1
 gconftool-2 --set /apps/gnome-terminal/profiles/DefaultBkp/visible_name --type string 'Default Bkp'
 
 echo "Set up default profile"
-gconftool-2 --type string --set /apps/gnome-terminal/global/default_profile 'Default'
+gconftool-2 --type string --set /apps/gnome-terminal/global/default_profile 'SolarizedDark'
 
 echo "Set up custom options for default profile"
 gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/foreground_color         '#F3F3F3F3F3F3'
@@ -93,6 +95,40 @@ gconftool-2 --type string --set /apps/gnome-terminal/profiles/SolarizedLight/for
 gconftool-2 --type string --set /apps/gnome-terminal/profiles/SolarizedLight/bold_color            '#586E75'
 
 basic_profile "SolarizedLight"
+
+AGNOSTIC_DARK_PALETTE="#06A22D392D39:#9D0212511251:#1E098CCC36BC:#947A936B017C:#0ADC4C408DA6:#82C31C378443:#10EE69CF69CF:#A221A221A221:#CA84CD44CF5B:#A8F5574B5AD1:#8473C7AD9371:#D39FD3078117:#53297365939F:#9709622C8EAB:#5D94955485B0:#F7F7F7F7D5D5"
+AGNOSTIC_LIGHT_PALETTE="#F7F7F7F7D5D5:#AC5E5ECA5D14:#55D692C54FBE:#B2589EC10000:#3D816975740D:#9709622C933B:#5D94955485B0:#888888138813:#51EB51EB51EB:#851E14DA30EB:#090B5A731B33:#AEEE4C8C0829:#08CF49F38B17:#69CE16385E61:#10EE69CF69CF:#08D92F63340D"
+
+echo "Create AgnosticDark profile as copy of Default"
+cp -R $HOME/.gconf/apps/gnome-terminal/profiles/Default $HOME/.gconf/apps/gnome-terminal/profiles/AgnosticDark
+sleep 1
+
+echo "Set up AgnosticDark"
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticDark/visible_name          'Agnostic Dark'
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticDark/palette               "$AGNOSTIC_DARK_PALETTE"
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticDark/use_theme_background  false
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticDark/use_theme_colors      false
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticDark/bold_color_same_as_fg true
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticDark/background_color      '#06A22D392D39'
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticDark/foreground_color      '#F7F7F7F7D5D5'
+# gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticDark/bold_color            '#586E75'
+
+basic_profile "AgnosticDark"
+
+echo "Create AgnosticLight profile as copy of Default"
+cp -R $HOME/.gconf/apps/gnome-terminal/profiles/Default $HOME/.gconf/apps/gnome-terminal/profiles/AgnosticLight
+sleep 1
+
+echo "Set up AgnosticLight"
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticLight/visible_name          'Agnostic Light'
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticLight/palette               "$AGNOSTIC_LIGHT_PALETTE"
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticLight/use_theme_background  false
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticLight/use_theme_colors      false
+gconftool-2 --type bool   --set /apps/gnome-terminal/profiles/AgnosticLight/bold_color_same_as_fg true
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticLight/foreground_color      '#06A22D392D39'
+gconftool-2 --type string --set /apps/gnome-terminal/profiles/AgnosticLight/background_color      '#F7F7F7F7D5D5'
+
+basic_profile "AgnosticLight"
 
 
 
