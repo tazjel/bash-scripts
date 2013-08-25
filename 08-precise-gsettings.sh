@@ -88,7 +88,6 @@ gsettings_set   org.gnome.desktop.screensaver     ubuntu-lock-on-suspend  true
 # Open the file browser with CTRL+ALT+F
 gsettings_set   org.gnome.settings-daemon.plugins.media-keys  home            "<Primary><Alt>f"
 gsettings_set   org.gnome.desktop.wm.keybindings              show-desktop    "['<Primary><Alt>d', '<Primary><Super>d', '<Super>d']"
-gsettings_set   org.gnome.desktop.wm.keybindings              switch-windows  "['<Alt>Tab']"
 gsettings_set   org.gnome.desktop.wm.preferences              audible-bell    false
 gsettings_set   org.gnome.desktop.wm.preferences              visual-bell     false
 gsettings_set   org.gnome.desktop.wm.preferences              num-workspaces  2
