@@ -6,7 +6,7 @@ source utils.sh
 
 sudo apt-get install -y mysql-server python-mysqldb python2.7
 
-GAE_VERSION=1.8.2
+GAE_VERSION=1.8.3
 echo "Installing google_appengine $GAE_VERSION"
 
 mkdir -p $HOME/bin $HOME/Downloads

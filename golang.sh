@@ -4,7 +4,7 @@ set -e
 
 source utils.sh
 
-GO_VERSION=1.1.1
+GO_VERSION=1.1.2
 go_projects="$HOME/Dropbox/projects/go"
 
 download_if_missing "http://go.googlecode.com/files/go$GO_VERSION.linux-amd64.tar.gz"
