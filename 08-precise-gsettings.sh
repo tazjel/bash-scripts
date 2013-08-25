@@ -82,7 +82,7 @@ gsettings_set   org.gnome.desktop.interface       show-input-method-menu  false
 gsettings_set   org.gnome.desktop.interface       show-unicode-menu       false
 
 gsettings_set   org.gnome.desktop.screensaver     lock-enabled            true
-gsettings_set   org.gnome.desktop.screensaver     lock-delay uint32       300
+gsettings_set   org.gnome.desktop.screensaver     lock-delay              300
 gsettings_set   org.gnome.desktop.screensaver     ubuntu-lock-on-suspend  true
 
 # Open the file browser with CTRL+ALT+F
