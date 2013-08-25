@@ -41,7 +41,9 @@ if [[ "$LIBREOFFICE_VERSION" == "$CURRENT" || "$LIBREOFFICE_VERSION" < "$CURRENT
   exit 0
 fi
 
+# https://wiki.documentfoundation.org/ReleaseNotes/4.1#Most_Annoying_Bugs
 sudo apt-get remove "libreoffice*" --purge -y
+sudo apt-get remove openoffice.org-dtd-officedocument1.0 python-uno python3-uno uno-libs3 ure --purge -y
 sudo apt-get autoremove --purge -y
 
 download_if_missing "${BASEURL}/${BASE_FILENAME}.tar.gz"

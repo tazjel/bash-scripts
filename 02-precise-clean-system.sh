@@ -29,43 +29,46 @@ apt_update_if_less_then_minutes_ago "60"
 # UNUSED PACKAGES #
 ###################
 
-sudo apt-get remove -y --purge \
-  gnome-games-data \
-  gnomine \
-  gnome-sudoku \
-  mahjongg \
-  aisleriot \
-  shotwell \
-  gwibber* \
-  libgwibber* \
-  empathy \
-  totem \
-  rhythmbox* \
-  xine-ui \
-  totem \
-  empathy-common \
-  gmusicbrowser \
-  gnumeric \
-  abiword* \
-  transmission-* \
-  libreoffice*
-  # \
-  # gimp* \
-  # vim-gnome
   # unity-lens-shopping # only >= 12.10
+
+sudo apt-get remove -y --purge \
+  gnome-games-data             \
+  gnomine                      \
+  gnome-sudoku                 \
+  mahjongg                     \
+  aisleriot                    \
+  shotwell                     \
+  gwibber*                     \
+  libgwibber*                  \
+  empathy                      \
+  totem                        \
+  rhythmbox*                   \
+  xine-ui                      \
+  totem                        \
+  empathy-common               \
+  gmusicbrowser                \
+  gnumeric                     \
+  abiword*                     \
+  transmission-*               \
+  libreoffice*
 
 sudo apt-get autoremove -y --purge
 
-sudo apt-get remove -y --purge \
-  hunspell-en-ca \
-  hunspell-en-us \
-  hyphen-en-us \
-  myspell-en-au \
-  myspell-en-za \
-  mythes-en-us \
-  mythes-en-au \
-  wamerican \
-  thunderbird*
+sudo apt-get remove -y --purge         \
+  hunspell-en-ca                       \
+  hunspell-en-us                       \
+  hyphen-en-us                         \
+  myspell-en-au                        \
+  myspell-en-za                        \
+  mythes-en-us                         \
+  mythes-en-au                         \
+  wamerican                            \
+  thunderbird*                         \
+  openoffice.org-dtd-officedocument1.0 \
+  python-uno                           \
+  python3-uno                          \
+  uno-libs3                            \
+  ure
 
 sudo apt-get autoremove -y --purge
 
