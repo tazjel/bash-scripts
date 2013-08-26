@@ -21,3 +21,8 @@ if [[ ! $(command -v dropbox) ]]; then
 else
   echo "Dropbox is already installed"
 fi
+
+echo "Ensure to be able to handle large number of files"
+
+echo "fs.inotify.max_user_watches=100000" | sudo tee -a /etc/sysctl.conf; sudo sysctl -p
+
