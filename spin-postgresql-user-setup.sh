@@ -24,8 +24,6 @@ echo
 
 sudo -iu postgres psql -c "CREATE USER spin WITH SUPERUSER PASSWORD 'spin';"
 echo "Create 'spin' postgresql user as superuser with password 'spin'."
-echo "NOTE: it's been created as a USER and not as a ROLE, otherwise it would"
-echo "not have login privileges and could not run rake tasks."
 echo
 
 sudo -iu postgres psql -c "CREATE DATABASE spin_development WITH OWNER spin;"
