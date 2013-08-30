@@ -81,6 +81,7 @@ sudo apt-get  -y install \
 ###############################
 
 add_ppa_if_missing "ppa:tualatrix/ppa" # ubuntu-tweak
+add_ppa_if_missing "ppa:numix/ppa" # numix theme and icons
 add_ppa_if_missing "ppa:tiheum/equinox" # faenza icons
 add_ppa_if_missing "ppa:cairo-dock-team/ppa"
 add_ppa_if_missing "ppa:ubuntu-mozilla-daily/ppa" # firefox-trunk
@@ -196,7 +197,11 @@ sudo apt-get -y install \
   libdvdread4 \
   gcp \
   mercurial \
-  perl-doc
+  perl-doc \
+  numix-gtk-theme \
+  numix-icon-theme \
+  numix-icon-theme-utouch \
+  numix-wallpaper-notd
 
 sudo update-rc.d -f redis-server remove
 sudo update-rc.d -f mysql remove
